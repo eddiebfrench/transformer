@@ -1,4 +1,4 @@
-from transformer import BigramLanguageModel
+from training.transformer import BigramLanguageModel
 import torch
 import sentencepiece as spm
 
