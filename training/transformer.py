@@ -15,7 +15,7 @@ batch_size = 32
 vocab_size = 10000
 dropout = 0.2
 device = 'cuda'
-sp = spm.SentencePieceProcessor(model_file='../weights/bpe.model')
+sp = spm.SentencePieceProcessor(model_file='weights/bpe.model')
 encode = lambda s: sp.encode(s, out_type=int)
 decode = lambda s: sp.decode(s)
 

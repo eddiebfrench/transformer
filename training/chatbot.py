@@ -2,7 +2,7 @@ from transformer import BigramLanguageModel
 import torch
 import sentencepiece as spm
 
-sp = spm.SentencePieceProcessor(model_file='../weights/bpe.model')
+sp = spm.SentencePieceProcessor(model_file='weights/bpe.model')
 encode = lambda s: sp.encode(s, out_type=int)
 decode = lambda s: sp.decode(s)
 
@@ -11,7 +11,7 @@ device = 'cuda'
 m = BigramLanguageModel(10000)
 m.to(device)
 
-m.load_state_dict(torch.load('../weights/weights_chat.pth'))
+m.load_state_dict(torch.load('weights/weights_chat.pth'))
 
 
 conversation = "A: "
